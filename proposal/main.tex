@@ -1,0 +1,135 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{framed}
+\usepackage{a4wide}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{afterpage}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{gensymb}
+\usepackage{amsfonts} 
+\usepackage[left=1in,top=0.75in,right=1in,bottom=1in]{geometry}
+\usepackage{setspace}           
+\usepackage{float}
+\usepackage{txfonts}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\newcommand{\Usefont}[1]{\fontfamily{#1}\selectfont}
+
+\usepackage{lscape} % for landscape tables
+\renewcommand{\baselinestretch}{1.7} 
+\titleformat{\chapter}[hang]
+  {\normalfont\LARGE\bfseries}
+   {\thechapter.}
+  {0.01em}
+  {}
+\titlespacing*{\chapter}{0pt}{*3}{*2}
+
+\usepackage{blindtext}
+\usepackage{xpatch}
+\usepackage{url}
+\usepackage{leqno}
+\usepackage{subcaption}
+\linespread{1.5}
+\usepackage[intoc, english]{nomencl}
+\hyphenpenalty=5000
+\tolerance=1000
+\usepackage[nottoc]{tocbibind}
+\setlength{\parskip}{1em}
+% ******* References config *********
+\bibliographystyle{IEEEtran}   % On some TeX systems this works
+%\bibliographystyle{ieeetr}      % While on others this works
+							% Uncomment and test if your references don't cite
+							% correctly
+\renewcommand{\bibname}{References}
+
+\title{GPCPKS SeminarReportTemplate}
+\author{sudevank }
+\date{July 2024}
+
+\begin{document}
+\gdef \title{How to prepare a Seminar report using \LaTeX } % Seminar title
+\gdef \author{Student Name}	 %student name
+\gdef \dept{Electronics  Engineering} %Department
+\gdef \degree{Diploma } %degree
+\gdef \branch{Electronics  Engineering} %branch
+\gdef \college{Government Polytechnic College}
+\gdef \collegeplace{Palakkad}
+\gdef \rollno{TVE17EC0XY} %KTU Reg No
+\gdef \deptabbr{Dept.of Electronics} %Dept name abbreviation
+\gdef \guide{Lecture-1}
+\gdef \hod{Dr. Dileep P} %Head of Department
+\gdef \hoddes{Professor and Head} %HOD designation
+
+\gdef \acadyear{2024 - 25} % Academic year
+\gdef \month{November 2024} %Month of Report submission
+\gdef \date{21-11-2020} %Date of signing the declaration
+\setcounter{secnumdepth}{1} 
+
+\include{cover}
+\pagenumbering{roman} 
+%\include{acknowledgement}
+\include{abstract} 
+
+
+
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\listoffigures
+%\listoftables
+
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\chapter{ Introduction}
+
+Nepal, classified as a Least Developed Country (LDC) \cite{Nepal_un} by the United Nations, faces significant healthcare challenges, including a shortage of medical professionals, inadequate infrastructure, and limited access to advanced diagnostic tools. With only 8.7 doctors per 10,000 people and 1.71 pharmacists per 10,000 people (2021) \cite{Nepal_profile}, the healthcare system struggles to meet the demands of its population, particularly in rural and remote areas. The country's health expenditures account for only 6. 5\% \cite{Nepal_un}of government expenditure, further exacerbating the situation. These challenges leave millions without timely access to quality healthcare, especially for critical diseases and conditions.
+
+To address these pressing healthcare issues, this project proposes the development of a machine learning (ML) model capable of detecting and predicting diseases using medical data such as X-rays, MRIs, and ECGs. This system aims to enhance diagnostic capabilities, offer cost-effective solutions, and provide timely, accurate, and scalable medical insights for healthcare providers in Nepal and similar regions.
+
+At the core of this system is the use of supervised learning, a powerful type of ML that trains models using labeled datasets. The project will utilize publicly available medical datasets, such as those from Kaggle and the Stanford AIMI (Artificial Intelligence in Medicine \& Imaging) shared dataset, which include diverse and well-annotated medical data. These datasets provide labels for a variety of medical conditions, including pneumonia, tuberculosis, brain tumors, and arrhythmias, among others.
+
+The system will be trained to detect patterns in these datasets and classify them accordingly, providing healthcare professionals with diagnostic insights based on medical imaging (X-rays, MRIs) and signal data (ECGs). This custom-built model will allow for more accurate and timely diagnoses, reducing errors and enhancing medical decision-making in Nepal, where access to specialists is limited.
+
+\section{Key Features of the Project}
+\begin{enumerate}
+  
+
+  \item  Second Opinions for Diagnosis: The system will function as a second-opinion tool for medical practitioners, which is especially crucial in Nepal, where healthcare providers often work under immense pressure and lack sufficient diagnostic support. This feature can reduce diagnostic errors and improve the overall quality of care.
+  \item  Affordable Healthcare for Impoverished Communities: The system is designed with low-cost and high-accessibility in mind. By offering AI-driven diagnostic assistance, it can be deployed in remote areas, enabling timely interventions for impoverished populations who otherwise lack access to specialized care.
+  \item  Scalability to Other LDCs: While tailored to address Nepal's healthcare challenges and common diesases, the system has the potential to be adapted for use in other Least Developed Countries (LDCs). By providing an affordable and scalable solution, the project can help bridge critical gaps in healthcare access in regions facing similar issues worldwide.
+ 
+  \item Medical Imaging (X-rays and MRIs): The model will be trained on labeled medical image datasets to detect anomalies such as nodules, fractures, or abnormal growths in X-rays and MRIs. Pre-trained models like ResNet and VGG may be used as starting points, fine-tuned with Nepal-specific data to enhance their accuracy in detecting diseases such as tuberculosis and conditions prevalent in Nepal's population.
+
+ \item ECG Signal Processing: The system will also analyze ECG data, identifying irregularities such as arrhythmias and ischemic events. This is particularly important given that cardiovascular diseases contribute to a 22\% probability of premature death from non-communicable diseases in Nepal\cite{Nepal_profile}.
+\end{enumerate}
+\section{Addressing Critical Health Issues in Nepal}
+Nepal's health statistics highlight areas where this system can make a significant impact. Tuberculosis, for instance, affects 229 per 100,000 people (2023), and maternal mortality stands at 182.3 per 100,000 live births (2019). These conditions, along with neonatal mortality (17 per 1,000 live births in 2022), are preventable with early diagnosis and intervention. The proposed system could help identify such conditions at an early stage, improving patient outcomes and reducing mortality rates\cite{Nepal_profile}.
+
+Furthermore, non-communicable diseases (NCDs), which contribute to 22\% of premature deaths among 30-year-olds, represent a growing concern. Early detection through AI-driven analysis could play a critical role in reducing the prevalence and impact of such diseases. Additionally, the system could be used to diagnose conditions resulting from air pollution, which causes 179.5 deaths per 100,000 people annually in Nepal\cite{Nepal_profile}.
+
+\section{Global Implications and Scalability}
+While the system is designed with Nepal's healthcare needs in mind, its potential extends far beyond national borders. By adapting the model to meet the specific needs of other LDCs, the system can be a transformative tool for improving healthcare accessibility globally. It can serve as a valuable asset for healthcare workers in countries with limited access to specialist support, providing early detection and aiding in accurate diagnosis. Furthermore, the second-opinion functionality ensures that even healthcare providers with limited expertise can make more confident and informed decisions.
+
+\pagebreak
+\chapter{Literature Review}
+
+
+\chapter{Chapter 3}
+
+
+
+\chapter{Chapter 4}
+
+\chapter{Conclusion}
+
+\raggedright
+\bibliography{refs}	
+\end{document}

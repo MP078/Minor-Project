@@ -156,7 +156,72 @@ By bringing like-minded travelers together, streamlining trip planning, and prov
     \item Collaborations and Partnerships: By providing users with special offers and discounts, forming alliances with travel agencies, transit companies, and lodging providers can improve the app's value proposition.
  
 \end{enumerate}
-\chapter{Chapter 4}
+\chapter{Requirements}
+\section{Functional requirements}
+\begin{enumerate}
+    \item Authentication: 
+    \begin{itemize}
+        \item The user shall be able to sign in with credentials and generate a authenticated session for the user. 
+        \item The user shall be able to register with an account with minimal input taken.
+    \end{itemize}
+
+    \item User profile:
+    \begin{itemize}
+        \item The user shall have two status ie: (verified and unverified), with verified being adding the id's and others being unverified.
+        \item The user shall be shown an onboarding page with their incomplete data status.
+        \item The verified user can view the status of other user but and uverified user can't view the status of the other user.
+        \item The user should be able to add their hobbies and interests.
+    \end{itemize}
+
+    \item Post: The user should be allowed to post their images featuring some destinations or places of interests.
+    \item Suggestions:
+    \begin{itemize}
+        \item The application shall suggest user friends and connections according to their hobbies and their profile verification status.
+        \item The application shall suggest the user some places to visit according to the rating and preferences of people with similar interests.
+        \item The application shall provide a place to reach out with like minded individuals who want to travel together or are unable to go on a trip due to lack of company.
+        \item The application shall implement some strict rules and regulations to regulate the misuse of the platform.
+    \end{itemize}
+
+    \item Ratings:
+    \begin{itemize}
+        \item The platform should have rating system for ranking the suggestions.
+        \item The users should be able to rate each other once they plan a trip in the application for the authenticity of the users.
+    \end{itemize}
+
+    \item Connection:
+    \begin{itemize}
+        \item The user should have the ability to establish connection with another user just like social media applications with accepting and rejecting features.
+        \item Connected users shall be able to chat with each others.
+        \item Chat shall be in real time.
+        \item Users shall be able to form groups.
+    \end{itemize}
+    \item Plans: User shall be able to create plans and the user with common plans and same verification level shall be suggested to each other.
+\end{enumerate}
+
+
+\section{Non-Functional requirements}
+\begin{enumerate}
+    \item Usability: The platform should have an intuitive and user-friendly interface, which is easy to access and use.
+    \item Performance: The platform should load within 2 seconds for standard broadband connections.
+    \item Scalability: The platform shall support a minimum of 1000 users initially, with room for scaling up.
+    \item Security: It should have a secure user authentication (e.g., HTTPS, encrypted passwords).
+    \item Maintainability: The code base should be modular and follow standard coding guidelines so that the code can be maintained and updated routinely.
+    \item Localization: The app should support time, date, and currency format according to user settings.
+    \item Consent: The users shall be explicitly notified about the code of conduct in the terms and conditions consent agreement.
+\end{enumerate}
+
+\chapter{Diagrams}
+
+\section{Dataflow diagram}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{figures/dataflow.png}
+    \caption{Dataflow Diagram for Travel Buddy}
+    \label{fig:dataflow}
+\end{figure}
+
+
+
 
 \chapter{Conclusion}
 

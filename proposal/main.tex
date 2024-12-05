@@ -6,6 +6,7 @@
 \usepackage{framed}
 \usepackage{a4wide}
 \usepackage{float}
+
 \usepackage{epsfig}
 \usepackage{longtable}
 \usepackage{enumerate}
@@ -89,50 +90,72 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 \chapter{ Introduction}
+With so many new places to discover and memories to create, traveling is a thrilling journey. However, there are challenges as well, such as organizing travel, handling finances,locating undiscovered places to go and the hardest, finding the right person to share the trip with. 
 
-Nepal, classified as a Least Developed Country (LDC) \cite{Nepal_un} by the United Nations, faces significant healthcare challenges, including a shortage of medical professionals, inadequate infrastructure, and limited access to advanced diagnostic tools. With only 8.7 doctors per 10,000 people and 1.71 pharmacists per 10,000 people (2021) \cite{Nepal_profile}, the healthcare system struggles to meet the demands of its population, particularly in rural and remote areas. The country's health expenditures account for only 6. 5\% \cite{Nepal_un}of government expenditure, further exacerbating the situation. These challenges leave millions without timely access to quality healthcare, especially for critical diseases and conditions.
+The nicest part of any trip is sharing it with someone. For this reason, we developed Travel Buddy, not just an app but an experience that not only assists with trip planning and organization but also serves as a platform for connecting with like-minded travelers.
 
-To address these pressing healthcare issues, this project proposes the development of a machine learning (ML) model capable of detecting and predicting diseases using medical data such as X-rays, MRIs, and ECGs. This system aims to enhance diagnostic capabilities, offer cost-effective solutions, and provide timely, accurate, and scalable medical insights for healthcare providers in Nepal and similar regions.
+\textbf{\textit{Who do I visit my dream place with? Well, the travel agent might plan it, but the travel buddy makes it unforgettable, because every journey needs a copilot for snacks and selfies!}}
 
-At the core of this system is the use of supervised learning, a powerful type of ML that trains models using labeled datasets. The project will utilize publicly available medical datasets, such as those from Kaggle and the Stanford AIMI (Artificial Intelligence in Medicine \& Imaging) shared dataset, which include diverse and well-annotated medical data. These datasets provide labels for a variety of medical conditions, including pneumonia, tuberculosis, brain tumors, and arrhythmias, among others.
+Every trip is made more enjoyable and unforgettable with Travel Buddy, whether it is for friendship, adventure, or simply enjoying each other's company.
 
-The system will be trained to detect patterns in these datasets and classify them accordingly, providing healthcare professionals with diagnostic insights based on medical imaging (X-rays, MRIs) and signal data (ECGs). This custom-built model will allow for more accurate and timely diagnoses, reducing errors and enhancing medical decision-making in Nepal, where access to specialists is limited.
+\chapter{Objective}
 
-\section{Key Features of the Project}
-\begin{enumerate}
-  
-
-  \item  Second Opinions for Diagnosis: The system will function as a second-opinion tool for medical practitioners, which is especially crucial in Nepal, where healthcare providers often work under immense pressure and lack sufficient diagnostic support. This feature can reduce diagnostic errors and improve the overall quality of care.
-  \item  Affordable Healthcare for Impoverished Communities: The system is designed with low-cost and high-accessibility in mind. By offering AI-driven diagnostic assistance, it can be deployed in remote areas, enabling timely interventions for impoverished populations who otherwise lack access to specialized care.
-  \item  Scalability to Other LDCs: While tailored to address Nepal's healthcare challenges and common diesases, the system has the potential to be adapted for use in other Least Developed Countries (LDCs). By providing an affordable and scalable solution, the project can help bridge critical gaps in healthcare access in regions facing similar issues worldwide.
- 
-  \item Medical Imaging (X-rays and MRIs): The model will be trained on labeled medical image datasets to detect anomalies such as nodules, fractures, or abnormal growths in X-rays and MRIs. Pre-trained models like ResNet and VGG may be used as starting points, fine-tuned with Nepal-specific data to enhance their accuracy in detecting diseases such as tuberculosis and conditions prevalent in Nepal's population.
-
- \item ECG Signal Processing: The system will also analyze ECG data, identifying irregularities such as arrhythmias and ischemic events. This is particularly important given that cardiovascular diseases contribute to a 22\% probability of premature death from non-communicable diseases in Nepal\cite{Nepal_profile}.
+Travel Buddy seeks to improve passengers' entire experience by addressing the typical problems they encounter. The application's goals are to make travel planning easier, create deep connections, and offer resources for a more pleasurable and hassle-free experience. The following are Travel Buddy's main goals:
+  \begin{enumerate}
+    \item Connect Travelers: Create a platform for users to find like-minded travel companions based on shared interests, destinations, or travel styles.
+    \item Discover Hidden Gems: Recommend off-the-beaten-path attractions and experiences tailored to user preferences.
+    \item Connection: Enable users to communicate with one another, share plans, and organize trips together seamlessly.
+    \item Manage Finances: Include an integrated expense management feature to help users track and budget their travel costs.
 \end{enumerate}
-\section{Addressing Critical Health Issues in Nepal}
-Nepal's health statistics highlight areas where this system can make a significant impact. Tuberculosis, for instance, affects 229 per 100,000 people (2023), and maternal mortality stands at 182.3 per 100,000 live births (2019). These conditions, along with neonatal mortality (17 per 1,000 live births in 2022), are preventable with early diagnosis and intervention. The proposed system could help identify such conditions at an early stage, improving patient outcomes and reducing mortality rates\cite{Nepal_profile}.
-
-Furthermore, non-communicable diseases (NCDs), which contribute to 22\% of premature deaths among 30-year-olds, represent a growing concern. Early detection through AI-driven analysis could play a critical role in reducing the prevalence and impact of such diseases. Additionally, the system could be used to diagnose conditions resulting from air pollution, which causes 179.5 deaths per 100,000 people annually in Nepal\cite{Nepal_profile}.
-
-\section{Global Implications and Scalability}
-While the system is designed with Nepal's healthcare needs in mind, its potential extends far beyond national borders. By adapting the model to meet the specific needs of other LDCs, the system can be a transformative tool for improving healthcare accessibility globally. It can serve as a valuable asset for healthcare workers in countries with limited access to specialist support, providing early detection and aiding in accurate diagnosis. Furthermore, the second-opinion functionality ensures that even healthcare providers with limited expertise can make more confident and informed decisions.
 
 \pagebreak
 \chapter{Literature Review}
+Travel Buddy, a travel application for itinerary planning and finding companions, builds upon existing research in tourism systems. The following literature review highlights key studies and platforms that influence its development.
 
-The integration of artificial intelligence (AI) into medical diagnosis has seen significant advancements, particularly in analyzing chest X-rays and CT scans. Recent studies highlight the capabilities and limitations of AI models in disease detection. For example, A. DeGrave et al. (2020) \cite{DeGrave_2020} and Gianluca Maguolo et al. (2020)\cite{Maguolo_2020} emphasize the challenges of shortcut learning, which can lead models to rely on spurious correlations instead of meaningful signals. Similarly, Sonit Singh (2024)\cite{Singh_2024} provides critical recommendations for mitigating biases in AI-driven COVID-19 detection.
+\section{ Tourism Websites and Creative Itineraries}
+Traditional travel websites often provide broad information but lack creativity in itinerary planning. A study in the International Journal of Scientific Research in Engineering and Management (2023) proposes a system for generating creative travel plans through information abstraction, reuse, and formulation. By ranking itineraries based on creativity, this system personalizes travel planning, which aligns with Travel Buddy’s goal of customized travel plans \cite{ijsrem2023}.
 
-Innovative architectures like UMLS-ChestNet (G. González et al., 2020)\cite{González_2020} and COVID-DenseNet (Laboni Sarker et al., 2020)\cite{Sarker_2020} demonstrate the effectiveness of deep convolutional neural networks in identifying radiological findings and diagnosing diseases. Benchmarking saliency methods, as discussed by A. Saporta et al. (2022)\cite{Saporta_2022}, offers insights into model interpretability, enhancing clinical trust in AI systems. Furthermore, ensemble-based deep learning approaches such as ECOVNet (Karim et al. et al., 2021)\cite{Karim2021ECOVNet} and multi-task models (Aakarsh Malhotra et al., 2020)\cite{Malhotra_2020} illustrate the utility of combining multiple algorithms for improved accuracy.
+\section{ Smart Tourism Systems}
+Al Saeed et al. (2020) address the need for smart tourism systems that cater to diverse tourist values like emotional and social experiences. Their "Travel Key" application, which provides personalized recommendations based on user preferences, serves as a model for Travel Buddy. It leverages user data to match travelers with compatible companions and enhance the overall experience \cite{alsaed2020}.
 
-The methodological review by Roberts et al. (2020)\cite{Roberts_2020} underscores the importance of robust data pre-processing and validation to ensure generalization across diverse datasets. While models like RANDGAN (Saman Motamed et al., 2020)\cite{Motamed_2020} leverage generative adversarial networks for data augmentation, studies by Beatriz Garcia Santa Cruz et al. (2021)\cite{Cruz_2021} caution against biases introduced by public datasets.
+\section{ Existing Travel Platforms}
+Platforms such as Be a Travel Buddy, Workaway, and TripGiraffe focus on connecting travelers with similar interests. These platforms highlight the growing demand for social travel experiences, which Travel Buddy integrates by allowing users to find travel companions while also managing logistics and itineraries\cite{beatravelbuddy}\cite{workaway}\cite{tripgiraffe}.
 
-These findings reflect the dual potential and pitfalls of AI in medical imaging, emphasizing the need for continuous innovation and scrutiny in deploying such models in clinical practice.
-
-\chapter{Chapter 3}
-
+\section{Challenges in Comprehensive Applications}
+Many travel apps focus on individual aspects like booking or itinerary planning but lack integration. Travel Buddy aims to unify these features, incorporating recommendation algorithms and creative itinerary generation to offer a more holistic travel experience.
 
 
+The reviewed literature demonstrates the need for an integrated platform like Travel Buddy, which combines itinerary planning, travel logistics, and social connectivity. This comprehensive approach meets the evolving demands of modern tourists.
+
+\chapter{Project Feasibility  and Statistics}
+By bringing like-minded travelers together, streamlining trip planning, and providing tailored recommendations, the Travel Buddy app is a creative way to improve the travel experience. To ascertain the Travel Buddy project's viability and commercial potential, this feasibility study assesses its technical, operational, social, legal and financial viability.
+\section{Market Viability}
+\begin{enumerate}
+  
+ \item Target Market: Young adults, frequent travelers, and lone travelers looking for company and individualized travel experiences make up Travel Buddy's main target market. There is a significant market need, as seen by the growing popularity of social travel and the rising use of smartphone apps for trip planning.
+
+ \item Competitive Analysis: While some travel applications now on the market concentrate on specific areas, such reservations or itineraries, very few incorporate social media and provide all-inclusive solutions. By fusing social networking, expenditure management, and trip planning, Travel Buddy distinguishes itself in the industry.
+
+ \item Market Demand: According to a study of 71 participants, a sizable portion of them indicated interest in using a platform to arrange travel plans and discover travel companions. This validates the demand for such an app and supports the market potential.
+\end{enumerate}
+\section{Regulatory and Legal Viability}
+\begin{enumerate}
+
+    \item Data Privacy: It's critical to protect user privacy and data. To protect user data, the app will abide by GDPR rules and other applicable data protection laws. Secure payment gateways will be incorporated for in-app purchases, and a transparent privacy policy will be written.
+
+    \item Intellectual Property: The user interface design and recommendation engine, among other distinctive features of Travel Buddy, will be safeguarded by intellectual property rights. Additionally, efforts will be made to register the app's name and logo as trademarks.
+
+\end{enumerate}
+\section{}
+\begin{enumerate}
+
+    \item User Experience: The success of the app will largely depend on the design of the user interface (UI) and user experience (UX). Engaging users and motivating them to use the app frequently depend on a straightforward, user-friendly design. Frequent user testing will be part of the operational process to make sure the app stays user-friendly.
+
+    \item Customer Support: To address questions, comments, and problem solving, an effective customer support system will be incorporated into the app. For routine questions, this can be accomplished via a chatbot; for more complicated problems, a ticket-based system can be used.
+
+    \item Collaborations and Partnerships: By providing users with special offers and discounts, forming alliances with travel agencies, transit companies, and lodging providers can improve the app's value proposition.
+ 
+\end{enumerate}
 \chapter{Chapter 4}
 
 \chapter{Conclusion}
